@@ -3,15 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My website</title>
 
-    <!-- css external -->
+    <!-- css external file -->
     <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
     
+    <!-- header -->
+    <header class="main-header p-[8px]">
+        <!-- logo web -->
+        <div class="main-logo"></div>
 
-    <!-- js external -->
+        <!-- navigation -->
+        <nav class="flex">
+            <a class="border rounded p-2" href="#home-page">Home</a>
+            <a class="border rounded p-2" href="#our-profile">Our Profile</a>
+            <a class="border rounded p-2" href="#portfolio">Portfolio</a>
+            <a class="border rounded p-2" href="#message-us">Message Us</a>
+        </nav>
+
+    </header>
+
+    <hr />
+
+    <!-- main -->
+    <main>
+        <!-- home -->
+        <section id="home-page" class="hero section p-4 min-h-[500px]">
+            <h1 class="text-4xl font-bold mb-4"><span id="greet-name"></span>Welcome to My Website</h1>
+            <p class="text-lg">This is a simple website created to demonstrate HTML structure with Tailwind CSS.</p>
+        </section>
+
+        <hr>
+
+        <!-- our profile -->
+        <section id="our-profile" class="our-profile section p-4 min-h-[500px]">
+            <h2 class="text-3xl font-semibold mb-4">Our Profile</h2>
+            <p class="text-lg">We are a team of passionate developers dedicated to building high-quality web applications.</p>
+        </section>
+
+        <hr>
+
+        <!-- portfolio -->
+        <section id="portfolio" class="portfolio section p-4 min-h-[500px]">
+            <h2 class="text-3xl font-semibold mb-4">Portfolio</h2>
+            <p class="text-lg">Check out our latest projects and case studies showcasing our expertise.</p>
+        </section>
+
+        <hr>
+
+        <!-- message us -->
+        <section id="message-us" class="message-us section p-4 min-h-[500px]">
+            <h2 class="text-3xl font-semibold mb-4">Message Us</h2>
+            <p class="text-lg">We would love to hear from you! Get in touch with us for any inquiries.</p>
+
+            <form >
+                    <label for="name" class="block mb-2">Name:</label>
+                    <input type="text" id="name-input" name="name" class="border p-2 mb-4 w-full" required>
+
+                    <label for="email" class="block mb-2">Email:</label>
+                    <input type="email" id="email-input" name="email" class="border p-2 mb-4 w-full" required>
+
+                    <label for="message" class="block mb-2">Message:</label>
+                    <textarea id="message-input" name="message" rows="4" class="w-full border p-2 mb-4" required></textarea>
+
+
+            </form>
+            
+            <button onclick="validateForm()" class="bg-blue-500 text-white px-4 py-2 rounded">Send Message</button>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-content p-4 text-center">
+            <p class="text-sm">&copy; 2024 My Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- js external file -->
     <script src="JS/script.js"></script>
 </body>
 </html>
